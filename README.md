@@ -16,9 +16,9 @@ Edita `config.js`:
 
 ```js
 window.PORTFOLIO = {
-  olamaniUrl: "",       // Streamlit Cloud
-  socceriqDemoUrl: "",  // demo Streamlit
-  lookerUrl: "",        // informe Looker (cualquiera con el enlace)
+  olamaniUrl: "https://soccerbi-enxtdbhzxgv4w8duvhgk4c.streamlit.app/",
+  socceriqDemoUrl: "",  // demo Streamlit de rendimiento físico, si aplica
+  lookerUrl: "https://datastudio.google.com/reporting/e13aca94-82cb-4166-b000-772a2f003ce0",
 };
 ```
 

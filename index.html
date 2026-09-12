@@ -33,7 +33,8 @@
     <a class="mark" href="#top">SCR</a>
     <nav>
       <a href="#productos">Productos</a>
-      <a href="#demo">Demo</a>
+      <a href="#demo">Olamani</a>
+      <a href="#looker">Looker</a>
       <a href="#trabajo">Trabajo</a>
       <a href="#stack">Stack</a>
       <a href="#sobre">Sobre mí</a>
@@ -84,6 +85,7 @@
           <h3>Olamani</h3>
           <p>Analista en español sobre BigQuery: tabla, rankings, ficha, comparación x90, pre y postpartido (mapas, xG, red de pases). El modelo no escribe SQL ni inventa goles.</p>
           <a href="olamani.html">Ver ficha</a>
+          · <a href="#demo">Abrir chat</a>
         </article>
         <article class="card">
           <p class="tag">02 · Rendimiento físico</p>
@@ -96,23 +98,45 @@
           <h3>De dónde vienen las jugadoras</h3>
           <p>Sankey de nacionalidad → liga y de liga previa → destino. Filtros por temporada, liga y puesto sobre la capa oro de StatsBomb.</p>
           <a href="origenes.html">Ver ficha</a>
+          · <a href="#looker">Ver dashboard</a>
         </article>
       </div>
     </section>
 
     <section id="demo" class="embed-section">
-      <p class="kicker">Demo embebida · SoccerIQ</p>
-      <h2>El plantel, aquí mismo</h2>
+      <p class="kicker">Demo embebida · Olamani</p>
+      <h2>Pregúntale a la liga</h2>
       <p class="note" style="margin-top:-0.6rem;margin-bottom:1rem;max-width:40rem">
-        Misma lógica que el dashboard Streamlit (disponibilidad ponderada, riesgo, distancia partido vs entrenamiento). Datos sintéticos de la demo pública.
+        Chat en vivo de Liga MX Femenil. La primera carga puede tardar mientras Streamlit despierta.
       </p>
       <iframe
-        id="socceriq-frame"
-        class="product-embed"
-        src="embed/socceriq.html"
-        title="SoccerIQ: disponibilidad del plantel y distancia por semana"
+        class="product-embed js-olamani-frame"
+        src="https://soccerbi-enxtdbhzxgv4w8duvhgk4c.streamlit.app/?embed=true"
+        title="Olamani: analista de Liga MX Femenil"
         loading="lazy"
+        allow="clipboard-write"
       ></iframe>
+    </section>
+
+    <section id="looker" class="embed-section">
+      <p class="kicker">Looker Studio · movilidad</p>
+      <h2>De dónde vienen las jugadoras</h2>
+      <p class="note" style="margin-top:-0.6rem;margin-bottom:1rem;max-width:40rem">
+        Informe vivo: nacionalidad, liga previa y más. Ábrelo a pantalla completa si el iframe pide sesión.
+      </p>
+      <div class="js-looker-wrap looker-embed">
+        <iframe
+          class="js-looker-frame"
+          title="Looker Studio: movilidad de jugadoras"
+          src="https://lookerstudio.google.com/embed/reporting/e13aca94-82cb-4166-b000-772a2f003ce0"
+          loading="lazy"
+          allowfullscreen
+          sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+        ></iframe>
+        <p class="hero-links">
+          <a class="btn js-looker-open" href="https://datastudio.google.com/reporting/e13aca94-82cb-4166-b000-772a2f003ce0" rel="noopener noreferrer" target="_blank">Abrir en Looker Studio</a>
+        </p>
+      </div>
     </section>
 
     <section id="trabajo">

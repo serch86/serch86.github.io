@@ -6,17 +6,31 @@
 
   const toLookerEmbed = (url) =>
     url
-      .replace("lookerstudio.google.com/reporting/", "lookerstudio.google.com/embed/reporting/")
       .replace("lookerstudio.google.com/u/0/reporting/", "lookerstudio.google.com/embed/reporting/")
+      .replace("lookerstudio.google.com/reporting/", "lookerstudio.google.com/embed/reporting/")
+      .replace("datastudio.google.com/u/0/reporting/", "lookerstudio.google.com/embed/reporting/")
       .replace("datastudio.google.com/reporting/", "lookerstudio.google.com/embed/reporting/");
+
+  const toStreamlitEmbed = (url) => {
+    const u = new URL(url);
+    u.searchParams.set("embed", "true");
+    return u.toString();
+  };
 
   if (cfg.olamaniUrl) {
     const live = document.getElementById("olamani-live");
     if (live) {
       live.href = cfg.olamaniUrl;
+      live.textContent = "Abrir Olamani";
       show(live);
     }
     hide(document.getElementById("olamani-note"));
+    hide(document.getElementById("olamani-mock"));
+    document.querySelectorAll(".js-olamani-frame").forEach((frame) => {
+      frame.src = toStreamlitEmbed(cfg.olamaniUrl);
+      show(frame);
+    });
+    show(document.getElementById("olamani-embed-wrap"));
   }
 
   if (cfg.socceriqDemoUrl) {
@@ -37,11 +51,14 @@
   }
 
   if (cfg.lookerUrl) {
-    const frame = document.getElementById("looker-frame");
-    const open = document.getElementById("looker-open");
-    if (frame) frame.src = toLookerEmbed(cfg.lookerUrl);
-    if (open) open.href = cfg.lookerUrl;
-    show(document.getElementById("looker-embed-wrap"));
+    const embed = toLookerEmbed(cfg.lookerUrl);
+    document.querySelectorAll(".js-looker-frame").forEach((frame) => {
+      frame.src = embed;
+    });
+    document.querySelectorAll(".js-looker-open").forEach((open) => {
+      open.href = cfg.lookerUrl;
+    });
+    document.querySelectorAll(".js-looker-wrap").forEach((wrap) => show(wrap));
     hide(document.getElementById("sankey-figure"));
   } else if (document.getElementById("sankey")) {
     drawSankey();

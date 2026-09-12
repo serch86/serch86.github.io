@@ -33,26 +33,24 @@
       allowlisted. Si no hay filas, dice que no sabe el dato.
     </p>
     <p class="hero-links">
-      <a id="olamani-live" class="btn is-hidden" href="#" target="_blank" rel="noopener noreferrer">Abrir Olamani</a>
+      <a id="olamani-live" class="btn" href="https://soccerbi-enxtdbhzxgv4w8duvhgk4c.streamlit.app/" target="_blank" rel="noopener noreferrer">Abrir Olamani</a>
       <a class="btn ghost" href="index.html#productos">Volver al inicio</a>
     </p>
 
-    <div class="split">
-      <ul class="facts">
-        <li>Warehouse StatsBomb → BigQuery (bronce / plata / oro)</li>
-        <li>Chat Streamlit: PDFs ReportLab y ZIP de gráficas</li>
-        <li>Radar x90 y pizza de percentil al comparar el mismo puesto</li>
-        <li>Alcance: torneos cargados, sin internet ni calendario de hoy</li>
-      </ul>
-      <figure class="mock mock-chat" aria-label="Ejemplo de conversación">
-        <figcaption>Chat</figcaption>
-        <div class="bubble user">¿Quiénes van arriba en goles del Apertura 2026?</div>
-        <div class="bubble bot">Ranking allowlisted contra BigQuery. Tabla + gráfica; si no hay filas, no inventa el dato.</div>
-        <div class="bubble user">Compara a Ribeiro vs Geyse en x90.</div>
-        <div class="bubble bot">Radar por puesto, mismas métricas /90, y pizza de percentil vs el grupo con 450+ min.</div>
-      </figure>
-    </div>
-    <p class="note" id="olamani-note">El chat aún no tiene URL pública. Cuando esté en Streamlit Cloud, el botón “Abrir Olamani” aparece aquí.</p>
+    <iframe
+      class="product-embed js-olamani-frame"
+      src="https://soccerbi-enxtdbhzxgv4w8duvhgk4c.streamlit.app/?embed=true"
+      title="Olamani: analista de Liga MX Femenil"
+      loading="lazy"
+      allow="clipboard-write"
+    ></iframe>
+
+    <ul class="facts" style="margin-top:1.4rem">
+      <li>Warehouse StatsBomb → BigQuery (bronce / plata / oro)</li>
+      <li>Chat Streamlit: PDFs ReportLab y ZIP de gráficas</li>
+      <li>Radar x90 y pizza de percentil al comparar el mismo puesto</li>
+      <li>Alcance: torneos cargados, sin internet ni calendario de hoy</li>
+    </ul>
   </main>
 
   <footer id="contacto">

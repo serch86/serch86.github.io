@@ -34,33 +34,21 @@
       pases completo: solo competiciones cargadas en el warehouse.
     </p>
 
-    <div id="looker-embed-wrap" class="looker-embed is-hidden">
+    <div id="looker-embed-wrap" class="looker-embed js-looker-wrap">
       <iframe
         id="looker-frame"
+        class="js-looker-frame"
         title="Dashboard Looker Studio: origen de jugadoras"
+        src="https://lookerstudio.google.com/embed/reporting/e13aca94-82cb-4166-b000-772a2f003ce0"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         allowfullscreen
+        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
       ></iframe>
       <p class="hero-links">
-        <a id="looker-open" class="btn" href="#" target="_blank" rel="noopener noreferrer">Abrir en Looker Studio</a>
+        <a id="looker-open" class="btn js-looker-open" href="https://datastudio.google.com/reporting/e13aca94-82cb-4166-b000-772a2f003ce0" rel="noopener noreferrer" target="_blank">Abrir en Looker Studio</a>
       </p>
     </div>
-
-    <figure id="sankey-figure" class="sankey-panel">
-      <figcaption>Nacionalidad → Liga MX Femenil</figcaption>
-      <p class="sankey-takeaway">
-        Lectura del dashboard: la mayoría del plantel es mexicana; el resto llega
-        sobre todo de Sudamérica y Europa.
-      </p>
-      <div id="sankey" role="img" aria-label="Flujo ilustrativo de nacionalidades hacia Liga MX Femenil"></div>
-      <p class="note">
-        Vista ilustrativa, no el conteo vivo. Looker usa
-        <code>COUNT_DISTINCT(player_id)</code> y se recorta por temporada y posición.
-        Pega el enlace del informe en <code>config.js</code> (<code>lookerUrl</code>)
-        para embeber el dashboard real.
-      </p>
-    </figure>
 
     <ul class="facts">
       <li>Fuente: <code>league_player_mobility_or</code> en BigQuery</li>
