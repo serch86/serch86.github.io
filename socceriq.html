@@ -37,31 +37,20 @@
       <a id="socceriq-demo" class="btn ghost is-hidden" href="#" target="_blank" rel="noopener noreferrer">Abrir demo</a>
     </p>
 
-    <div class="split">
-      <ul class="facts">
-        <li>Squad Overview: disponibilidad, banda de riesgo, carga por jugadora</li>
-        <li>Trends: distancia, HSR, sprint · partido vs entrenamiento</li>
-        <li>Availability, Weekly Load, drill-down y export de reporte</li>
-        <li>Repo público <code>serch86/team-performance-dashboard</code></li>
-      </ul>
-      <figure class="mock mock-squad" aria-label="Vista de disponibilidad">
-        <figcaption>Squad overview</figcaption>
-        <div class="kpis">
-          <div><span>Disponibilidad</span><strong>82%</strong></div>
-          <div><span>Riesgo alto</span><strong>2</strong></div>
-          <div><span>Carga media</span><strong>71%</strong></div>
-        </div>
-        <ul class="squad">
-          <li><span>Portería</span><span class="bar" style="--p:88%"></span><em>Low</em></li>
-          <li><span>Central</span><span class="bar" style="--p:64%"></span><em>Mod</em></li>
-          <li><span>Lateral</span><span class="bar" style="--p:91%"></span><em>Low</em></li>
-          <li><span>Volante</span><span class="bar" style="--p:48%"></span><em>High</em></li>
-          <li><span>Extremo</span><span class="bar" style="--p:76%"></span><em>Low</em></li>
-          <li><span>9</span><span class="bar" style="--p:39%"></span><em>Crit</em></li>
-        </ul>
-        <p class="note">Ilustración. Los números de la demo no son de un club real.</p>
-      </figure>
-    </div>
+    <iframe
+      id="socceriq-frame"
+      class="product-embed"
+      src="embed/socceriq.html"
+      title="SoccerIQ: disponibilidad del plantel y distancia por semana"
+      loading="lazy"
+    ></iframe>
+
+    <ul class="facts" style="margin-top:1.4rem">
+      <li>Squad Overview: disponibilidad, banda de riesgo, carga por jugadora</li>
+      <li>Trends: distancia, HSR, sprint · partido vs entrenamiento</li>
+      <li>Availability, Weekly Load, drill-down y export de reporte</li>
+      <li>Repo público <code>serch86/team-performance-dashboard</code></li>
+    </ul>
   </main>
 
   <footer id="contacto">

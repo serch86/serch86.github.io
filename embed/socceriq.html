@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoccerIQ — demo embebida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b100e;
+      --card: #121915;
+      --ink: #e7eee6;
+      --muted: #8b978c;
+      --line: #24302a;
+      --accent: #c6f04d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .shell { padding: 0.9rem 1rem 0.7rem; }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.55rem;
+      margin-bottom: 0.85rem;
+    }
+    .kpis div {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.55rem 0.7rem;
+    }
+    .kpis span { display: block; color: var(--muted); font-size: 0.8rem; line-height: 1.25; margin-bottom: 0.2rem; }
+    .kpis strong { font-size: 1.2rem; color: var(--accent); font-weight: 600; }
+    .takeaway { margin: 0 0 0.65rem; color: var(--ink); }
+    .grid {
+      display: grid;
+      gap: 0.9rem;
+    }
+    @media (min-width: 860px) {
+      .grid { grid-template-columns: 1.05fr 1fr; align-items: start; }
+    }
+    @media (max-width: 640px) {
+      .kpis { grid-template-columns: 1fr; }
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { text-align: left; padding: 0.38rem 0.4rem; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .table-wrap {
+      max-height: 280px;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--card);
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.12rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .caption { color: var(--muted); font-size: 0.86rem; margin: 0.55rem 0 0; }
+    #trend { min-height: 280px; }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="kpis" id="kpis"></div>
+    <div class="grid">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th>Estado</th>
+              <th>Carga</th>
+              <th>Riesgo</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div>
+        <div id="trend"></div>
+        <p class="caption">En partido el equipo recorre cerca de 8 km más que en el entrenamiento de la misma semana. Datos sintéticos de la demo pública.</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.3/plotly.min.js"></script>
+  <script src="socceriq-data.js"></script>
+  <script src="socceriq.js"></script>
+</body>
+</html>

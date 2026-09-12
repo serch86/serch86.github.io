@@ -312,6 +312,16 @@ footer a { color: var(--ink); }
 #sankey { width: 100%; min-height: 280px; }
 #sankey svg { width: 100%; height: auto; display: block; }
 
+.product-embed {
+  width: 100%;
+  min-height: 640px;
+  height: 72vh;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.embed-section { scroll-margin-top: 4.6rem; }
 .looker-embed { margin: 1.4rem 0 1.8rem; }
 .looker-embed iframe {
   width: 100%;

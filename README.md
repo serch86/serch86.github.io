@@ -7,7 +7,7 @@ Sitio estático en GitHub Pages: https://serch86.github.io/
 ## Productos
 
 - [Olamani](olamani.html) — chat analista de Liga MX Femenil
-- [SoccerIQ](socceriq.html) — rendimiento físico (`team-performance-dashboard`)
+- [SoccerIQ](socceriq.html) — rendimiento físico (`team-performance-dashboard`), **demo embebida** en `embed/socceriq.html`
 - [Origen de las jugadoras](origenes.html) — Looker Studio (Sankey)
 
 ## Enlaces vivos

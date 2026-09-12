@@ -25,6 +25,15 @@
       demo.href = cfg.socceriqDemoUrl;
       show(demo);
     }
+    document.querySelectorAll("#socceriq-frame").forEach((frame) => {
+      try {
+        const u = new URL(cfg.socceriqDemoUrl);
+        u.searchParams.set("embed", "true");
+        frame.src = u.toString();
+      } catch {
+        frame.src = cfg.socceriqDemoUrl;
+      }
+    });
   }
 
   if (cfg.lookerUrl) {
