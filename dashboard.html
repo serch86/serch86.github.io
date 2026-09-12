@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard de plantel — Sergio Camposortega</title>
+  <meta name="description" content="Dashboard para staff: disponibilidad del plantel, riesgo, carga semanal y tendencias físicas.">
+  <link rel="canonical" href="https://serch86.github.io/dashboard.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <header class="top">
+    <a class="mark" href="index.html">SCR</a>
+    <nav>
+      <a href="index.html#productos">Productos</a>
+      <a href="index.html#dashboard">Dashboard</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <p class="kicker"><a href="index.html#productos">← Productos</a> · 02</p>
+    <h1>Dashboard de plantel</h1>
+    <p class="lede">Disponibilidad y riesgo primero; luego carga semanal y tendencias físicas.</p>
+    <p class="bio">
+      Herramienta para staff. Abre en el estado del plantel (quién está disponible,
+      quién carga de más). Desde el menú: tendencias de distancia / HSR / sprint,
+      availability, control de carga, drill-down por jugador y export de reporte.
+      La demo usa datos sintéticos.
+    </p>
+    <p class="hero-links">
+      <a class="btn" id="dashboard-open" href="https://socceriqonline-r94gmgbxcu6sp4zqeffe5i.streamlit.app/" target="_blank" rel="noopener noreferrer">Abrir dashboard</a>
+      <a class="btn ghost" href="https://github.com/serch86/team-performance-dashboard">Repositorio</a>
+    </p>
+
+    <iframe
+      class="product-embed js-dashboard-frame"
+      src="https://socceriqonline-r94gmgbxcu6sp4zqeffe5i.streamlit.app/?embed=true"
+      title="Dashboard de plantel: disponibilidad, riesgo y carga"
+      loading="lazy"
+      allow="clipboard-write"
+    ></iframe>
+  </main>
+
+  <footer id="contacto">
+    <p>Sergio Camposortega Rendón · CDMX</p>
+    <p class="footer-links">
+      <a href="https://github.com/serch86">GitHub</a>
+      <a href="https://www.linkedin.com/in/sergio-camposortega-rendon-74776b101/">LinkedIn</a>
+    </p>
+  </footer>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -33,20 +33,15 @@
     show(document.getElementById("olamani-embed-wrap"));
   }
 
-  if (cfg.socceriqDemoUrl) {
-    const demo = document.getElementById("socceriq-demo");
-    if (demo) {
-      demo.href = cfg.socceriqDemoUrl;
-      show(demo);
+  if (cfg.dashboardUrl || cfg.socceriqDemoUrl) {
+    const dashUrl = cfg.dashboardUrl || cfg.socceriqDemoUrl;
+    const open = document.getElementById("dashboard-open");
+    if (open) {
+      open.href = dashUrl;
+      show(open);
     }
-    document.querySelectorAll("#socceriq-frame").forEach((frame) => {
-      try {
-        const u = new URL(cfg.socceriqDemoUrl);
-        u.searchParams.set("embed", "true");
-        frame.src = u.toString();
-      } catch {
-        frame.src = cfg.socceriqDemoUrl;
-      }
+    document.querySelectorAll(".js-dashboard-frame").forEach((frame) => {
+      frame.src = toStreamlitEmbed(dashUrl);
     });
   }
 
