@@ -223,6 +223,9 @@ footer {
 }
 footer a { color: var(--ink); }
 
+.embed-section { scroll-margin-top: 4.6rem; }
+.card strong { color: var(--ink); font-weight: 600; }
+
 .page { padding-top: 3.2rem; max-width: 1100px; }
 .page h1 { margin-bottom: 0.6rem; }
 
